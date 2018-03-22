@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>USB Barcode scanner proof of concept</title>
+  </head>
+  <body>
+    <div>
+        <button id="refresh-button" style="display:inline-block;">Poll USB Devices</button>
+        <button id="serial-refresh-button" style="display:inline-block;">Poll COM Ports</button>
+    </div>
+    <h4>Choose a USB device:</h4>
+    <select id="scanner-select">
+    </select>
+    <h4>Scan Results:</h4>
+    <p id="scanner-results"></p>
+    <h4>Choose a serial device:</h4>
+    <select id="serial-select">
+    </select>
+    <h4>Send to Serial Device:</h4>
+    <input type="text" id="serial-echo-data">
+    <button id="serial-echo-button">Send</button>
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
